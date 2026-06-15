@@ -1,4 +1,4 @@
 # Directions of work
-Go to Frontend -> src -> pages
-Go to Frontend -> src -> components
+Go to Frontend -> src -> pages <br>
+Go to Frontend -> src -> components <br> 
 update css to add styles
