@@ -6,3 +6,7 @@ nav{
     justify-content: space-between;
     padding-inline: 20px;
 }
+
+span{
+    margin-right: 1rem;
+}

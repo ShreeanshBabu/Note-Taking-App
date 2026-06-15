@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from "../context/AuthContext";
+import './Register.css';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -63,7 +64,7 @@ export default function Register() {
             required
           />
         </div>
-        {error && <p style={{color: 'red'}}>{error}</p>}
+        {error && <p className="error">{error}</p>}
         <button type="submit">Register</button>
       </form>
       <p>

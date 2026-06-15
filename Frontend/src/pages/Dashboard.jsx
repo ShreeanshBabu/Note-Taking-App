@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import api from "../api/axios";
 import NoteCard from "../components/NoteCard";
 import { useSyncExternalStore } from "react";
+import './Dashboard.css';
 
 export default function Dashboard() {
   const {user} = useAuth;
@@ -40,17 +41,17 @@ export default function Dashboard() {
   };
 
   return (
-    <div style={{maxWidth: '700px', margin: '0 auto', padding: '1rem'}}>
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem'}}>
+    <div className="dashboard">
+      <div className="topBar">
         <h2>My Notes</h2>
         <button onClick={() => navigate('/notes/new')}>+ New Note</button>
       </div> 
 
       {loading && <p>Loading notes...</p>}
-      {error && <p style={{color: 'red'}}>{error}</p>}
+      {error && <p className="error">{error}</p>}
 
       {!loading && notes.length === 0 && (
-        <p style={{color: '#999'}}>You don't have any notes yet. Create your first one!</p>
+        <p className="emptyText">You don't have any notes yet. Create your first one!</p>
       )}
 
       {notes.map((note) => (

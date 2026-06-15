@@ -1,0 +1,30 @@
+.editor{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.backBtn{
+    margin-bottom: 1rem;
+}
+
+.holder{
+    margin-bottom: 1rem;
+}
+
+input{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    resize: none;
+}
+
+.error{
+    color: red;
+}

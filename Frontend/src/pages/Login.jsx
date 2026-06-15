@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from "../context/AuthContext";
+import './Login.css';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -43,7 +44,7 @@ export default function Login() {
             required 
           />
         </div>
-        {error && <p style={{color: 'red'}}>{error}</p>}
+        {error && <p className="error">{error}</p>}
         <button type="submit">Login</button>
       </form>
       <p>

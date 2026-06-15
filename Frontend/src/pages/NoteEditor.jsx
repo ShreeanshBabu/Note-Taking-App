@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import api from "../api/axios";
+import './NoteEditor.css';
 
 export default function NoteEditor() {
   const {id} = useParams(); // undefined for /notes/new, has a value for /notes/:id
@@ -60,35 +61,33 @@ export default function NoteEditor() {
   }
 
   return (
-    <div style={{maxWidth: '700px', margin: '0 auto', padding: '1rem'}}>
-      <button onClick={() => navigate('/')} style={{marginBottom: '1rem'}}>
+    <div className="editor">
+      <button className="backBtn" onClick={() => navigate('/')}>
         ← Back
       </button>
 
       <h2>{isEditing ? 'Edit Note' : 'New Note'}</h2>
 
       <form onSubmit={handleSubmit}>
-        <div style={{marginBottom: '1rem'}}>
+        <div className="holder">
           <input 
             type="text" 
             placeholder="Note title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            style={{width: '100%', padding: '0.5rem', fontSize: '1.2rem'}}
           />
         </div>
 
-        <div style={{marginBottom: '1rem'}}>
+        <div className="holder">
           <textarea 
             placeholder="Write your note..."
             value={content}
             onChange={(e) => setContent(e.target.value)}
             rows={12}
-            style={{width: '100%', padding: '0.5rem', fontSize: '1rem', resize: 'none'}}
           />
         </div>
 
-        {error && <p style={{color: 'red'}}>{error}</p>}
+        {error && <p className="error">{error}</p>}
 
         <button type="submit" disabled={saving}>
           {saving ? 'Saving...' : 'Save Note'}
