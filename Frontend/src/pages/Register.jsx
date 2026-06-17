@@ -25,10 +25,10 @@ export default function Register() {
   };
 
   return (
-    <div>
+    <div className="registerBox">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="dataEntry">
           <label>User Name</label>
           <input 
             type="text" 
@@ -37,7 +37,7 @@ export default function Register() {
             required
           />
         </div>
-        <div>
+        <div className="dataEntry">
           <label>Email</label>
           <input 
             type="email" 
@@ -46,7 +46,7 @@ export default function Register() {
             required
           />
         </div>
-        <div>
+        <div className="dataEntry">
           <label>Password</label>
           <input 
             type="password" 
@@ -55,7 +55,7 @@ export default function Register() {
             required
           />
         </div>
-        <div>
+        <div className="dataEntry">
           <label>Confirm Password</label>
           <input 
             type="password" 
@@ -67,8 +67,8 @@ export default function Register() {
         {error && <p className="error">{error}</p>}
         <button type="submit">Register</button>
       </form>
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
+      <p className="msg">
+        Already have an account? <Link className="link" to="/login">Login</Link>
       </p>
     </div>
   );

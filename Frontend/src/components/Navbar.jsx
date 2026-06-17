@@ -15,9 +15,9 @@ export default function Navbar() {
         <nav>
             <h3>Notes App</h3>
             {user && (
-                <div>
-                    <span>{user.name}</span>
-                    <button onClick={handleLogout}>Logout</button>
+                <div className='tools'>
+                    <span className='userName'>{user.name}</span>
+                    <button className='logout' onClick={handleLogout}>Logout</button>
                 </div>
             )}
         </nav>

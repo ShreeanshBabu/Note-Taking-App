@@ -41,22 +41,26 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="dashboard">
-      <div className="topBar">
-        <h2>My Notes</h2>
-        <button onClick={() => navigate('/notes/new')}>+ New Note</button>
-      </div> 
+    <div className="backgroundDash">
+      <div className="dashboard">
+        <div className="topBar">
+          <h2>My Notes</h2>
+          <button className="newNote" onClick={() => navigate('/notes/new')}>+ New Note</button>
+        </div> 
 
-      {loading && <p>Loading notes...</p>}
-      {error && <p className="error">{error}</p>}
+        {loading && <p>Loading notes...</p>}
+        {error && <p className="error">{error}</p>}
 
-      {!loading && notes.length === 0 && (
-        <p className="emptyText">You don't have any notes yet. Create your first one!</p>
-      )}
+        {!loading && notes.length === 0 && (
+          <p className="emptyText">You don't have any notes yet. Create your first one!</p>
+        )}
 
-      {notes.map((note) => (
-        <NoteCard key={note._id} note={note} onDelete={handleDelete} />
-      ))}
+        <div className="notes">
+          {notes.map((note) => (
+            <NoteCard key={note._id} note={note} onDelete={handleDelete} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
