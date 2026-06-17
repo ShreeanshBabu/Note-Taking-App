@@ -83,6 +83,16 @@ textarea:focus{
     outline-offset: 2px;
 }
 
+textarea::placeholder,
+input::placeholder{
+    color: #311503;
+}
+
+textarea:focus::placeholder,
+input:focus::placeholder{
+    opacity: 0.5;
+}
+
 .error{
     color: red;
 }
