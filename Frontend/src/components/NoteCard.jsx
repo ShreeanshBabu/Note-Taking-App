@@ -19,13 +19,12 @@ export default function NoteCard({note, onDelete}) {
     return (
         <div className='card' onClick={() => navigate(`/notes/${note._id}`)}>
             <h3>{note.title}</h3>
-            <p>
-                {note.content.slice(0,100)}
-                {note.content.length > 100 ? '...' : ''}
+            <p className='content'>
+                {note.content}
             </p>
             <div className='info'>
                 <small>Updated {formattedDate}</small>
-                <button onClick={handleDelete}>Delete</button>
+                <button className='delete' onClick={handleDelete}>Delete</button>
             </div>
         </div>
     );

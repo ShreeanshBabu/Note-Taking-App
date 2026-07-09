@@ -1,14 +1,77 @@
+.backgroundDash{
+    background-image: url('https://wallpapers.com/images/high/kawaii-laptop-oxf8qzdiwtc0cln7.webp');
+    object-fit: cover;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block: 15px;
+    height: calc(100vh - 80px);
+}
+
 .dashboard{
     max-width: 700px;
     margin: 0 auto;
     padding: 1rem;
+    border: 5px solid #2f1a0569;
+    border-radius: 12px;
+    background-color: #a5764929;
+    backdrop-filter: blur(10px);
 }
+
+/* .newNote{
+    background: rgb(50, 207, 50);
+    border: 2px solid rgb(54, 139, 54);
+} */
 
 .topBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    color: #3f1c05;
+}
+
+.topBar.shadowOut{
+    box-shadow: 0px 10px 8px -8px rgba(74, 31, 9, 0.15);
+}
+
+.topBar h2{
+    margin: 0;
+}
+
+.topBar button{
+    margin: 15px;
+}
+
+.notes{
+    max-height: 582px;
+    padding-top: 1rem;
+    overflow: auto;
+}
+
+.notes.shadowIn{
+    box-shadow: inset 0px -10px 8px -8px rgba(74, 31, 9, 0.15);
+}
+
+.notes::-webkit-scrollbar{
+    width: 8px;
+}
+
+.notes::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 4px;
+}
+
+.notes::-webkit-scrollbar-thumb{
+    background: rgb(123, 56, 31);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: border-box;
+}
+
+.notes::-webkit-scrollbar-thumb:hover{
+    background: rgb(97, 45, 26);
+    cursor: default;
 }
 
 .error{
@@ -16,5 +79,5 @@
 }
 
 .emptyText{
-    color: #999;
+    color: #3f1c05;
 }

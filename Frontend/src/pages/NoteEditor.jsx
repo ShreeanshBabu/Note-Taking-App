@@ -61,38 +61,40 @@ export default function NoteEditor() {
   }
 
   return (
-    <div className="editor">
-      <button className="backBtn" onClick={() => navigate('/')}>
-        ← Back
-      </button>
-
-      <h2>{isEditing ? 'Edit Note' : 'New Note'}</h2>
-
-      <form onSubmit={handleSubmit}>
-        <div className="holder">
-          <input 
-            type="text" 
-            placeholder="Note title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
-
-        <div className="holder">
-          <textarea 
-            placeholder="Write your note..."
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            rows={12}
-          />
-        </div>
-
-        {error && <p className="error">{error}</p>}
-
-        <button type="submit" disabled={saving}>
-          {saving ? 'Saving...' : 'Save Note'}
+    <div className="backgroundNote">
+      <div className="editor">
+        <button className="backBtn" onClick={() => navigate('/')}>
+          ← Back
         </button>
-      </form>
+
+        <h2 className="title">{isEditing ? 'Edit Note' : 'New Note'}</h2>
+
+        <form onSubmit={handleSubmit} spellCheck='false'>
+          <div className="holder">
+            <input 
+              type="text" 
+              placeholder="Note title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+
+          <div className="holder">
+            <textarea 
+              placeholder="Write your note..."
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              rows={12}
+            />
+          </div>
+
+          {error && <p className="error">{error}</p>}
+
+          <button type="submit" disabled={saving}>
+            {saving ? 'Saving...' : 'Save Note'}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

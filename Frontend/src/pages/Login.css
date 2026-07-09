@@ -35,7 +35,8 @@ label{
 button{
     margin-block: 10px;
     margin-bottom: 15px;
-    background: #000;
+    border: 2px solid #46250d;
+    background: #783c0f;
     border-radius: 8px;
     padding: 5px 15px;
     color: white;
@@ -44,6 +45,9 @@ button{
 
 button:hover{
     cursor: pointer;
+    transform: scale(1.02);
+    background: #67340c;
+    /* transition: ease-in-out; */
 }
 
 .link{

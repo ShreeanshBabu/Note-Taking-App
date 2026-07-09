@@ -35,7 +35,8 @@ label{
 button{
     margin-block: 10px;
     margin-bottom: 15px;
-    background: #000;
+    background: #783c0f;
+    border: 2px solid #46250d;
     border-radius: 8px;
     padding: 5px 15px;
     color: white;

@@ -1,10 +1,24 @@
 nav{
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #632e09;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-inline: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgb(205 131 92);
+    color: #632e09;
+}
+
+.tools{
+    display: flex;
+    align-items: center;
+}
+
+.logout{
+    margin: 0;
 }
 
 h3{
@@ -12,8 +26,9 @@ h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-span{
+.userName{
     margin-right: 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
+    font-weight: bolder;
 }
