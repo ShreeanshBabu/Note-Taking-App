@@ -23,10 +23,10 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className="loginBox">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="dataEntry">
           <label>Email</label>
           <input 
             type="email"
@@ -35,20 +35,20 @@ export default function Login() {
             required 
           />
         </div>
-        <div>
+        <div className="dataEntry">
           <label>Password</label>
           <input 
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required 
+            required
           />
         </div>
         {error && <p className="error">{error}</p>}
         <button type="submit">Login</button>
       </form>
-      <p>
-        Don't have an account? <Link to="/register">Register</Link>
+      <p className="msg">
+        Don't have an account? <Link className="link" to="/register">Register</Link>
       </p>
     </div>
   );

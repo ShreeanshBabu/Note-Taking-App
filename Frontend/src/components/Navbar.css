@@ -1,12 +1,19 @@
 nav{
-    box-shadow: 0 0 1px black;
-    height: 60px;
+    border-bottom: 3px solid black;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-inline: 20px;
 }
 
+h3{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 span{
     margin-right: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
 }
