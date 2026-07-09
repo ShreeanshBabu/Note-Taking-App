@@ -3,6 +3,7 @@
     object-fit: cover;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     padding-block: 15px;
     height: calc(100vh - 80px);
